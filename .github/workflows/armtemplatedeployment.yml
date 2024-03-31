@@ -46,4 +46,13 @@ jobs:
               sku=standard_LRS
             deploymentMode: incremental
 
-      - run: echo ${{ steps.storageAccountDeploy.outputs.BlobUri}}
+      - name: Deploy virtual machine
+        uses: Azure/arm-deploy@v2
+        with:
+            scope : resourcegroup
+            resourceGroupName: rg-githubactions
+            subscriptionId: 26c72f3b-beb6-489d-8bb3-d5f749ab1083
+            template: ./arm-templates/virtualmachine.json
+            parameters: 
+                adminPassword="My$secureP@password!"
+            deploymentMode: incremental
