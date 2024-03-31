@@ -43,7 +43,7 @@ jobs:
             parameters: 
               storageAccountName=djayglobost002
               location="Australia Southeast"
-              sku=standatd_LRS
+              sku=standard_LRS
             deploymentMode: incremental
 
       - run: echo ${{ steps.storageAccountDeploy.outputs.BlobUri}}
