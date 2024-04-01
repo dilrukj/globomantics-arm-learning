@@ -47,7 +47,7 @@ jobs:
             deploymentMode: incremental
 
       - name: Deploy virtual machine
-        uses: Azure/arm-deploy@v2
+        uses: Azure/arm-deploy@v1
         with:
             scope : resourcegroup
             resourceGroupName: rg-githubactions
@@ -55,5 +55,5 @@ jobs:
             template: ./arm-templates/vm.json
             parameters: 
               adminPassword=${{ secrets.UBUNTU_ADMIN_PASSWORD}}
-              location= Australia East
+              location= "Australia East"
             deploymentMode: incremental
