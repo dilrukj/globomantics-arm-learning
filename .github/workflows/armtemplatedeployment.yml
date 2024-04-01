@@ -13,6 +13,7 @@ env:
   resource_group_name: rg-githubactions
   location: Australia East
   subscriptionId: 26c72f3b-beb6-489d-8bb3-d5f749ab1083
+
 jobs:
   armDeploy:
     runs-on: ubuntu-latest
@@ -41,7 +42,7 @@ jobs:
         id: storageAccountDeploy
         with:
             scope : resourcegroup
-            resourceGroupName: ${{ env.resource_group_name}}
+            resourceGroupName: ${{ env.resource_group_name }}
             subscriptionId: ${{ env.subscriptionId }}
             template: ./arm-templates/storageaccount.json
             parameters: 
@@ -53,7 +54,7 @@ jobs:
       - name: Deploy virtual machine
         uses: Azure/arm-deploy@v2
         with:
-            scope : resourcegroup
+            scope: resourcegroup
             resourceGroupName: ${{ env.resource_group_name }}
             subscriptionId: ${{ env.subscriptionId }}
             template: ./arm-templates/virtualmachine.json
