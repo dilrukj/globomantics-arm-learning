@@ -9,7 +9,7 @@ on:
 env:
   resource_group_name: rg-githubactions
   location: Australia East
-  subscriptionId: 4d0243f5-b1f4-4bd0-91bb-ce6481e6e810
+  subscriptionId: 26c72f3b-beb6-489d-8bb3-d5f749ab1083
 
 jobs:
   armDeploy:
