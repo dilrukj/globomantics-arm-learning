@@ -1,7 +1,14 @@
 {
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
-    "parameters": {},
+    "parameters": {
+        "adminPassword": {
+            "type": "SecureString",
+            "metadata": {
+                "description": "description"
+            }
+        }
+    },
     "functions": [],
     "variables": {},
     "resources": [
@@ -71,8 +78,8 @@
                 },
                 "osProfile": {
                     "computerName": "windowsVM1",
-                    "adminUsername": "adminUsername",
-                    "adminPassword": "adminPassword"
+                    "adminUsername": "djayadmin",
+                    "adminPassword": "[parameters('adminPassword')]"
                 },
                 "storageProfile": {
                     "imageReference": {
