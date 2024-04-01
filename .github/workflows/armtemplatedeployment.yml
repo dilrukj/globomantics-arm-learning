@@ -46,7 +46,7 @@ jobs:
           subscriptionId: ${{ env.subscriptionId }}
           template: ./arm-templates/storageaccount.json
           parameters: 
-            storageAccountName=djayglobost002
+            storageAccountName=djayglobost003
             location="${{ env.location }}"
             sku=standard_LRS
           deploymentMode: incremental
