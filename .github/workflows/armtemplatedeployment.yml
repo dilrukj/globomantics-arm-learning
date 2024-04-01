@@ -55,4 +55,5 @@ jobs:
             template: ./arm-templates/vm.json
             parameters: 
               adminPassword=${{ secrets.UBUNTU_ADMIN_PASSWORD}}
+              location="australiaeast"
             deploymentMode: incremental
