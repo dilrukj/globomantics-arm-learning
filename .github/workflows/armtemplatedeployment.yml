@@ -71,7 +71,7 @@ jobs:
     name: Deploy to production
     runs-on: ubuntu-latest
     env:
-      resource_group_name: rg-githubactions
+      resource_group_name: rg-prod-githubactions
       location: Australia Southeast
     environment:
       name: production
