@@ -47,7 +47,7 @@ jobs:
             deploymentMode: incremental
 
       - name: Deploy virtual machine
-        uses: Azure/arm-deploy@v1
+        uses: Azure/arm-deploy@v2
         with:
             scope : resourcegroup
             resourceGroupName: rg-githubactions
