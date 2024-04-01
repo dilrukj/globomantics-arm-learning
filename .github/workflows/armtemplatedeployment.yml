@@ -52,8 +52,7 @@ jobs:
             scope : resourcegroup
             resourceGroupName: rg-githubactions
             subscriptionId: 26c72f3b-beb6-489d-8bb3-d5f749ab1083
-            template: ./arm-templates/virtualmachine.json
+            template: ./arm-templates/vm.json
             parameters: 
                 adminPassword=${{ secrets.UBUNTU_ADMIN_PASSWORD}}
-                location="Australia East"
             deploymentMode: incremental
