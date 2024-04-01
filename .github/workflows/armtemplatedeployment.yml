@@ -42,7 +42,7 @@ jobs:
             template: ./arm-templates/storageaccount.json
             parameters: 
               storageAccountName=djayglobost002
-              location="Australia Southeast"
+              location="Australia East"
               sku=standard_LRS
             deploymentMode: incremental
 
@@ -55,4 +55,5 @@ jobs:
             template: ./arm-templates/virtualmachine.json
             parameters: 
                 adminPassword=${{ secrets.UBUNTU_ADMIN_PASSWORD}}
+                location="Australia East"
             deploymentMode: incremental
